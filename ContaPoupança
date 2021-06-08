@@ -1,9 +1,0 @@
-public class ContaPoupança extends Conta {
-    private static double taxa;
-
-    public ContaPoupança(int numero, double saldo, double taxa){
-        super(numero, saldo);
-        ContaPoupança.taxa = taxa;
-    }
-
-}
