@@ -5,7 +5,24 @@ public class ContaEspecial extends Conta {
         super(numero, saldo);
         this.limite = limite;
     }
-    
+   
+     //get e set
+    public double getLimite() {
+        return limite;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
+    }
+
+    @Override
+    public String toString() {
+        String s = "Conta Especial:";
+        
+        s += "; " + super.toString();
+        s += " limite adicional: " + limite;
+        return s;
+    }
   
     
 }
