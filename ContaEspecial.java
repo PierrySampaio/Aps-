@@ -5,8 +5,8 @@ public class ContaEspecial extends Conta {
         super(numero, saldo);
         this.limite = limite;
     }
-   
-     //get e set
+    
+    //get e set
     public double getLimite() {
         return limite;
     }
@@ -23,6 +23,18 @@ public class ContaEspecial extends Conta {
         s += " limite adicional: " + limite;
         return s;
     }
-  
+    @Override
+    public boolean sacar(double valor){
+        
+        double saldoComLimite = super.getSaldo() + limite;
+        
+        if((saldoComLimite - valor)>=0){
+           double s = saldoComLimite - valor;
+            
+           super.setSaldo(s);
+           return true;
+        }
+        return false;
+    }
     
 }
